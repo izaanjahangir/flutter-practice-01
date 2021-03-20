@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "package:cscsPractice/screens/news_details/news_details.dart";
 
 class NewsItem extends StatelessWidget {
   final Map newsData;
@@ -9,7 +10,16 @@ class NewsItem extends StatelessWidget {
   Widget build(BuildContext context) {
     final double width = MediaQuery.of(context).size.width;
 
-    return Container(
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => NewsDetails(
+                    newsData: newsData,
+                  )),
+        );
+      },
       child: Card(
         child: Column(
           mainAxisSize: MainAxisSize.min,

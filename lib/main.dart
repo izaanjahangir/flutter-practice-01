@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import "./screens/news/news.dart";
+import "./screens/news_details/news_details.dart";
 
 void main() {
   runApp(MyApp());
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       routes: {
         "/": (context) => News(),
+        "/news-details": (context) => NewsDetails()
       },
     );
   }
